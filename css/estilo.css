@@ -1,0 +1,193 @@
+/* TAGS */
+
+body, body *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(228, 228, 228);
+}
+header, footer{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.87) 10%, black 80%), url('../imagens/headerbg.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+header{
+    height: 40%;
+}
+header nav{
+    width: 100%;
+    background-color:rgb(6, 6, 24);
+    color: rgb(190, 190, 190);
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+header nav ul:not(.inner-list){
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li{
+    display: inline-block;
+    border: 2px dotted transparent;
+    min-width: 8%;
+    margin: 2vh 0;
+    text-align: center;
+    transition: all .4s;
+}
+header ul li:hover{
+    color: white;
+    border-bottom: 2px dotted rgb(28, 26, 145);
+    cursor: pointer;
+}
+header ul li.has-intern{
+    border-bottom: transparent;
+}
+nav .inner-list li{
+    display: block;
+    color: rgb(95, 95, 95);
+    text-transform: none;
+    margin: 0;
+    padding: 1.5vh 0 0 0;
+}
+footer{
+    width: 100%;
+    height: 10vh;
+    margin-top: 10vh;
+}
+header p{
+    font-family: sans-serif;
+    font-size: 5vw;
+    color: white;
+    width: 80%;
+}
+header img{
+    display: inline-block;
+    width: 12%;
+    border-radius: 50%;
+    margin: 1% 0 1% 4%;
+}
+header p{
+    text-align: center;
+}
+section{
+    width: 80%;
+    margin: auto;
+}
+section p{
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(30, 30, 49);
+    font-size: 3em;
+    margin: 5% 0;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+h2{
+    color: rgb(47, 47, 87);
+    font-size: 2em;
+    margin: 3% 0;
+}
+table{
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+table td, table th{
+    border: 2px solid black;
+    padding: 2% 1%;
+    font-size: 1.5em;
+}
+table td{
+    font-size: 1.2em;
+    color: rgb(32, 26, 26);
+}
+table tr:nth-child(2n){
+    background-color: rgb(211, 211, 211);
+}
+table tr:nth-child(2n-1):not(thead tr){
+    background-color: rgb(165, 165, 165);
+}
+table th:first-child, table td:first-child{
+    text-align: center;
+    width: 30%;
+}
+thead tr{
+    border-bottom: 5px solid rgb(12, 12, 43);
+    background-color: rgb(88, 90, 173);
+    color: rgb(0, 0, 0);
+}
+
+/* CLASSES */
+.inner-list{
+    display: none;
+}
+.dp-block{
+    display: block;
+}
+.blue{
+    background-color:rgb(163, 199, 230);
+    background-blend-mode: darken;
+}
+.red{
+    background-color: rgb(231, 173, 173);
+}
+.green{
+    background-color: rgb(206, 255, 196);
+}
+.header-main-div{
+    display: flex;
+    align-items: center;
+}
+.master{
+    display: flex;
+    justify-content: space-evenly;
+}
+.master p{
+    font-size: 1.7em;
+}
+.master div{
+    text-align: center;
+    width: 30%;
+}
+.btn{
+    padding: 1%;
+    border-radius: 10px;
+    font-size: 1.2em;
+    width: 80%;
+    margin: 3% auto;
+    color: rgb(59, 59, 59);
+}
+.pressed{
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border: 2px rgb(0, 0, 0) solid;
+    color: rgb(0, 0, 0);
+}
+
+/* IDs */
+#certificate{
+    text-align: center;
+    font-size: 1.5em;
+}
+#certificate img{
+    width: 75%;
+    margin: 2% auto;
+    box-shadow: 0 0 30px black;
+    border-radius: 20px;
+}
+#certificate a{
+    text-decoration: none;
+    border-bottom: 3px dotted rgb(26, 160, 165);
+    color: black;
+    transition: all .6s;
+}
+
+#certificate a:hover{
+    border-bottom: 3px dotted transparent;
+    color: rgb(14, 89, 92);
+}
