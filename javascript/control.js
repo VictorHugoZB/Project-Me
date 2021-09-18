@@ -3,15 +3,11 @@ $().ready(function(){
     // animação menu descendo
     // utilizando slide up e down do Jquery para fazer o efeito de transição
     $('.has-intern').each(function(index, obj){
-        $(obj).on({
-            mouseover : function(e){
-                $(obj).find('.inner-list').slideDown();
-                        
-            },
-            mouseleave : function(e){
-                $(obj).find('.inner-list').slideUp(); 
-            }
-        });
+        $(obj).hover(function(){
+            $(obj).find('.inner-list').stop(true, true).slideDown();
+        },function(){
+            $(obj).find('.inner-list').slideUp();
+        });    
     });
 
     // navegação vertical
