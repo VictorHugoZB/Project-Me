@@ -56,6 +56,33 @@ footer{
     height: 10vh;
     margin-top: 10vh;
 }
+footer ul{
+    list-style: none;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+}
+footer ul li{
+    display: inline-block;
+    font-size: 1.2em;
+}
+footer ul li:not(:last-child){
+    
+}
+footer span{
+    color: white;
+    transition: color .4s;
+}
+footer a span:hover{
+    color: rgb(0, 255, 234);
+}
+footer a{
+    text-decoration: none;
+}
 header p{
     font-family: sans-serif;
     font-size: 5vw;
@@ -125,6 +152,9 @@ thead tr{
 }
 
 /* CLASSES */
+.hidden{
+    display: none;
+}
 .inner-list{
     display: none;
 }
