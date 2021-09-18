@@ -4,27 +4,41 @@ $().ready(function(){
     // utilizando slide up e down do Jquery para fazer o efeito de transição
     $('.has-intern').each(function(index, obj){
         $(obj).on({
-            mouseover : function(){
+            mouseover : function(e){
                 $(obj).find('.inner-list').slideDown();
+                        
             },
-            mouseleave : function(){
-                $(obj).find('.inner-list').slideUp();
+            mouseleave : function(e){
+                $(obj).find('.inner-list').slideUp(); 
             }
-        })
-    })
+        });
+    });
 
     // navegação vertical
     // Fazendo slideup do nav antes da navegação vertical para não causar conflito
     var ids = ['about-page', 'page', 'about-me', 'me', 'objectives', 'languages', 'certificates', 'contact'];
     $('.v-nav').each(function(index, obj){
-        $(obj).click(function(){
-            $(obj).find('.inner-list').slideUp(200, function(){
+        $(obj).click(function(e){
+
+            var innerlist;
+            if ($(obj).parent('.inner-list').length > 0){
+                innerlist = $(obj).parent('.inner-list');
+            } else if ($(obj).find('.inner-list').length > 0){
+                innerlist = $(obj).find('.inner-list');
+            }
+            
+            $(innerlist).slideUp(200);
+
+            $(innerlist).promise().done(function(){
                 $('html,body').animate({
                     scrollTop: $('#'+ids[index]).offset().top
                 }, 1500);
-            })
-        })
-    })
+            });
+            
+            // Estava também disparando o evento da li PAI, este comando corrige!!!!!
+            e.stopPropagation();
+        });
+    });
 
     // script para mudança de certificado pelos botões
     var previousObj;
@@ -66,7 +80,7 @@ $().ready(function(){
                     }
                     previousObj = obj2;
                 }
-            })
-        })
-    })
-})
+            });
+        });
+    });
+});
