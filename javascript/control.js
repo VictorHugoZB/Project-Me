@@ -12,7 +12,7 @@ $().ready(function(){
 
     // navegação vertical
     // Fazendo slideup do nav antes da navegação vertical para não causar conflito
-    var ids = ['about-page', 'page', 'about-me', 'me', 'objectives', 'languages', 'certificates', 'contact'];
+    var ids = ['about-page', 'page', 'about-me', 'me', 'objectives', 'languages', 'certificates'];
     $('.v-nav').each(function(index, obj){
         $(obj).click(function(e){
 
