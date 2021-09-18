@@ -70,9 +70,6 @@ footer ul li{
     display: inline-block;
     font-size: 1.2em;
 }
-footer ul li:not(:last-child){
-    
-}
 footer span{
     color: white;
     transition: color .4s;
