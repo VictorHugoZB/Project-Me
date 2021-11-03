@@ -2,6 +2,7 @@
 $().ready(function(){
     // animação menu descendo
     // utilizando slide up e down do Jquery para fazer o efeito de transição
+    // stop interrompe a animação atual e inicia outra - impede que várias animações fiquem na pilha.
     $('.has-intern').each(function(index, obj){
         $(obj).hover(function(){
             $(obj).find('.inner-list').stop(true, true).slideDown();
@@ -11,7 +12,6 @@ $().ready(function(){
     });
 
     // navegação vertical
-    // Fazendo slideup do nav antes da navegação vertical para não causar conflito
     var ids = ['about-page', 'page', 'about-me', 'me', 'objectives', 'languages', 'certificates'];
     $('.v-nav').each(function(index, obj){
         $(obj).click(function(e){
@@ -23,6 +23,7 @@ $().ready(function(){
                 innerlist = $(obj).find('.inner-list');
             }
             
+            // Fazendo slideup do nav antes da navegação vertical para não causar conflito
             $(innerlist).slideUp(200);
 
             $(innerlist).promise().done(function(){
@@ -37,6 +38,8 @@ $().ready(function(){
     });
 
     // script para mudança de certificado pelos botões
+    // laço duplo utilizado para deixar o processo de adição de botões mais "automático"
+    // sem necessidade de alterar o script
     var previousObj;
     $('#certificate').hide();
     $('#c-div div').each(function(i, obj){
@@ -61,8 +64,10 @@ $().ready(function(){
                             filepdf = filepdf + 'courserac';
                             break;
                     }
+
                     fileimg = fileimg + (i2 + 1) + '.jpg';
                     filepdf = filepdf + (i2 + 1) + '.pdf';
+
                     $('#certificate img').attr('src', fileimg);
                     $('#certificate p').html('PDF File: <a href="' + filepdf + '" target="_blank">Click Here!</a>');
 

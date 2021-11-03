@@ -183,16 +183,6 @@ thead tr{
 .dp-block{
     display: block;
 }
-.blue{
-    background-color:rgb(163, 199, 230);
-    background-blend-mode: darken;
-}
-.red{
-    background-color: rgb(231, 173, 173);
-}
-.green{
-    background-color: rgb(206, 255, 196);
-}
 .header-main-div{
     display: flex;
     align-items: center;
@@ -211,13 +201,17 @@ thead tr{
 .btn{
     padding: 1%;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: .8em;
+    height: 3em;
     width: 80%;
     margin: 3% auto;
-    color: rgb(59, 59, 59);
+    font-weight: bold;
+    background-color: white;
+    border: 2px black solid;
+    color: rgb(0, 0, 0);
 }
 .pressed{
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
     border: 2px rgb(0, 0, 0) solid;
     color: rgb(0, 0, 0);
 }
@@ -230,7 +224,7 @@ thead tr{
 #certificate img{
     width: 75%;
     margin: 2% auto;
-    box-shadow: 0 0 30px black;
+    box-shadow: 0 0 20px rgb(30, 30, 49);
     border-radius: 20px;
 }
 #certificate a{
